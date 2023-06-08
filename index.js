@@ -27,7 +27,42 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+     client.connect();
+
+     const usersCollection = client.db("SummerCampDB").collection("users");
+     const classesCollection = client.db("SummerCampDB").collection("classes");
+     const instructorsCollection = client.db("SummerCampDB").collection("instructors");
+
+     app.post('/users', async (req, res) => {
+        const user = req.body;
+        const query = { email: user.email }
+        const existingUser = await usersCollection.findOne(query);
+  
+        if (existingUser) {
+          return res.send({ message: 'user already exists' })
+        }
+  
+        const result = await usersCollection.insertOne(user);
+        res.send(result);
+      });
+
+      app.get("/users", async (req, res) => {
+        const cursor = usersCollection.find();
+        const result = await cursor.toArray();
+        res.send(result);
+      });
+
+      app.get("/instructors", async (req, res) => {
+        const cursor = instructorsCollection.find();
+        const result = await cursor.toArray();
+        res.send(result);
+      });
+
+      app.get("/classes", async (req, res) => {
+        const cursor = classesCollection.find();
+        const result = await cursor.toArray();
+        res.send(result);
+      });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
