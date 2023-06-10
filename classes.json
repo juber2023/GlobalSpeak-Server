@@ -3,70 +3,90 @@
       "image": "https://img.freepik.com/free-vector/colorful-education-concept-with-flat-design_23-2147903635.jpg?w=826&t=st=1686205157~exp=1686205757~hmac=2b0f862f5e3ab30fa9c490c8f43bdac76d6121a90622c173a31b5d015b5d554f",
       "name": "French Beginner",
       "instructor": "Jhonkar Mahbub",
+      "email":"jhonkar@2023.com",
       "availableSeats": 10,
-      "price": 200
+      "price": 200,
+      "type":"Pending"
     },
     {
       "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?w=900&t=st=1686205182~exp=1686205782~hmac=dc0dfd55c22a0a24c1761df04d52fc1b16c9820f1e05ab869ee676bca219c898",
       "name": "Spanish Intermediate",
       "instructor": "Juber",
+      "email":"juber@gmail.com",
       "availableSeats": 5,
-      "price": 250
+      "price": 250,
+      "type":"Pending"
     },
     {
       "image": "https://img.freepik.com/free-photo/close-up-still-life-hard-exams_23-2149314075.jpg?w=1380&t=st=1686205197~exp=1686205797~hmac=f332e12fd0008c83909b059038a0c5917143c44d9f9acc4ac628464b33934bb4",
       "name": "German Advanced",
       "instructor": "Jerin Fariha",
+      "email":"jerin@2023.com",
       "availableSeats": 8,
-      "price": 300
+      "price": 300,
+      "type":"Pending"
     },
     {
         "image": "https://img.freepik.com/free-vector/education-infographic-with-open-book_23-2147505468.jpg?w=826&t=st=1686205212~exp=1686205812~hmac=d1a3d2d113d61fd0b59427a6cbe809f3e998c579df48e7d164635c92732bccb3",
         "name": "Mandarin Intermediate",
         "instructor": "Jerin Fariha",
+        "email":"jerin@2023.com",
         "availableSeats": 7,
-        "price": 280
+        "price": 280,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/free-photo/close-up-still-life-hard-exams_23-2149314044.jpg?w=1380&t=st=1686205228~exp=1686205828~hmac=9860ff9aa3b4656c14643a50c040a76602c994e82a65d5ee7f380995baf5182c",
         "name": "Japanese Advanced",
         "instructor": "Ahmed Khalid",
+        "email":"Ahmed@2023.com",
         "availableSeats": 9,
-        "price": 320
+        "price": 320,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/free-photo/stack-books-black-wooden-table_93675-135345.jpg?w=1380&t=st=1686205246~exp=1686205846~hmac=e93ab9d33eb37d321700be09821925d732ed16c82f5f60fa579166581a26c23c",
         "name": "Russian Beginner",
         "instructor": "Kim Minji",
+        "email":"kim@2023.com",
         "availableSeats": 15,
-        "price": 190
+        "price": 190,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/premium-vector/book-with-icons-art-object-vector-illustration_3482-3579.jpg?w=826",
         "name": "Arabic Intermediate",
         "instructor": "Ahmed Khalid",
+        "email":"Ahmed@2023.com",
         "availableSeats": 6,
-        "price": 270
+        "price": 270,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/premium-vector/school-supplies-design_24908-7491.jpg?w=826",
         "name": "Portuguese Advanced",
         "instructor": "Juber",
+        "email":"juber@gmail.com",
         "availableSeats": 11,
-        "price": 330
+        "price": 330,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/free-vector/realistic-back-school-books_23-2147521300.jpg?w=826&t=st=1686205307~exp=1686205907~hmac=8cb8d0d7f61c7c20ce0730a385a47c23d1092c962fb533ccb830666b5a50ff53",
         "name": "Korean Beginner",
         "instructor": "Kim Minji",
+        "email":"kim@2023.com",
         "availableSeats": 14,
-        "price": 170
+        "price": 170,
+        "type":"Pending"
       },
       {
         "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?w=826&t=st=1686205400~exp=1686206000~hmac=dd0098c12054ced92fb59e8336db563ed0282d1181563e8daa14e64e324ad1a4",
         "name": "Swedish Intermediate",
         "instructor": "Juber",
+        "email":"juber@gmail.com",
         "availableSeats": 4,
-        "price": 240
+        "price": 240,
+        "type":"Pending"
       }
   ]
