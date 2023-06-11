@@ -51,7 +51,7 @@ async function run() {
         res.send(result);
       });
 
-    
+    // Manage Classes 
       app.put('/classes/:id', async(req,res)=>{
         const id=req.params.id;
         const query={_id:new ObjectId(id)}
@@ -62,8 +62,22 @@ async function run() {
         }
         const result= await classesCollection.updateOne(query,updatedClass,options)
         res.send(result)
+      });
+
+      // Manage users 
+      app.put('/users/:id', async(req,res)=>{
+        const id=req.params.id;
+        const query={_id:new ObjectId(id)}
+        const options={upsert:true}
+        const user=req.body
+        const updatedClass={
+          $set:{role:user.role}
+        }
+        const result= await usersCollection.updateOne(query,updatedClass,options)
+        res.send(result)
       })
       
+      //  users info
       app.post('/users', async (req, res) => {
         const user = req.body;
         const query = { email: user.email }
@@ -74,6 +88,14 @@ async function run() {
         }
 
         const result = await usersCollection.insertOne(user);
+        res.send(result);
+      });
+
+
+      app.get("/users/:id", async (req, res) => {
+        const id = req.params.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await usersCollection.findOne(query);
         res.send(result);
       });
     // Send a ping to confirm a successful connection
