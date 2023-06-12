@@ -157,9 +157,10 @@ async function run() {
       const updatedClass = {
         $set: { enroll: user.enroll },
       };
+      const update = { $set: { enroll: "enrolled" } };
       const result = await enrollCollection.updateOne(
         query,
-        updatedClass,
+        update,
         options
       );
       res.send(result);
