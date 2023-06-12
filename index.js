@@ -149,6 +149,22 @@ async function run() {
       res.send(result);
     });
 
+    app.put("/payment/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const user = req.body;
+      const updatedClass = {
+        $set: { enroll: user.enroll },
+      };
+      const result = await enrollCollection.updateOne(
+        query,
+        updatedClass,
+        options
+      );
+      res.send(result);
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
