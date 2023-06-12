@@ -32,6 +32,7 @@ async function run() {
      const usersCollection = client.db("SummerCampDB").collection("users");
      const classesCollection = client.db("SummerCampDB").collection("classes");
      const instructorsCollection = client.db("SummerCampDB").collection("instructors");
+     const enrollCollection = client.db("SummerCampDB").collection("enroll");
 
       app.get("/users", async (req, res) => {
         const cursor = usersCollection.find();
@@ -106,6 +107,27 @@ async function run() {
         res.send(result);
       });
 
+      // enroll info 
+      app.post('/enroll', async (req, res) => {
+        const user = req.body;
+        const query = { email: user.email }
+        const existingUser = await enrollCollection.findOne(query);
+
+        if (existingUser) {
+          return res.send({ message: 'user already exists' })
+        }
+
+        const result = await enrollCollection.insertOne(user);
+        res.send(result);
+      });
+
+      app.get("/enroll", async (req, res) => {
+        const cursor = enrollCollection.find();
+        const result = await cursor.toArray();
+        res.send(result);
+      });
+
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
@@ -117,7 +139,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Summer camp is sitting')
+    res.send('Summer camp is on going')
   })
   
   app.listen(port, () => {
